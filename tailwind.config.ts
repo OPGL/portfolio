@@ -1,5 +1,6 @@
 import containerQueries from '@tailwindcss/container-queries';
 import forms from '@tailwindcss/forms';
+import catppuccin from '@catppuccin/daisyui';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
@@ -10,5 +11,8 @@ export default {
 		extend: {}
 	},
 
-	plugins: [typography, forms, containerQueries, require('daisyui')]
+	plugins: [typography, forms, containerQueries, require('daisyui')],
+	daisyui: {
+		themes: [catppuccin('macchiato')]
+	}
 } satisfies Config;
